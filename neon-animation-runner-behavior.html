@@ -57,7 +57,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     _shouldComplete: function(activeEntries) {
       var finished = true;
       for (var i = 0; i < activeEntries.length; i++) {
-        if (activeEntries[i].animation.playState != 'finished') {
+        var animation = activeEntries[i].animation;  
+        if (animation.playState != 'finished') {
           finished = false;
           break;
         }
